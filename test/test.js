@@ -35,8 +35,8 @@ contract('DStorage', ([deployer, uploader]) => {
     const fileDescription = 'DescriptionOfTheFile'
 
     before(async () => {
-      result = await dstorage.uploadFile(fileHash, fileSize, fileType, fileName, fileDescription, { from: uploader })
-      fileCount = await dstorage.fileCount()
+      result = await dstorage.uploadFile(fileHash, fileSize, fileName, fileType, fileDescription, { from: uploader })
+      fileCount = await dstorage.filesCount()
     })
 
     //check event
